@@ -1,0 +1,50 @@
+#app,
+#app-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app-container {
+  display: flex;
+  flex-direction: column;
+
+  footer {
+    .app-name {
+      padding: var(--spacing);
+      color: var(--footer-color);
+
+      .name {
+        margin-right: var(--spacing);
+      }
+    }
+  }
+}
+
+.header-editor {
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+  overflow: hidden;
+  text-align: center;
+
+  &:before,
+  &:after {
+    content: "";
+    background-color: var(--text-color);
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  &:before {
+    right: var(--header-line-spacing);
+    margin-left: -50%;
+  }
+
+  &:after {
+    left: var(--header-line-spacing);
+    margin-right: -50%;
+  }
+}

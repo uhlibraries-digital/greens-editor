@@ -1,0 +1,53 @@
+:root {
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-size: 12px;
+  --font-size-md: 14px;
+  --font-weight-semibold: 600;
+  --text-color: #fff;
+  --background-color: #4d5057;
+  --main-color: #66cc00;
+  
+  --spacing: 10px;
+  --spacing-triple: calc(var(--spacing) * 3);
+  --spacing-third: calc(var(--spacing) / 3);
+  --spacing-half: calc(var(--spacing) / 2);
+  --spacing-double: calc(var(--spacing) * 2);
+  
+  --base-border: 1px solid var(--box-border-color);
+  --base-box-shadow: 0 2px 7px var(--shadow-color);
+  --box-border-color: #787c7f;
+  --border-radius: 3px;
+  --box-background-color: #3a3c41;
+  --focus-color: var(--main-color);
+  --box-alt-background-color: #3a3c41;
+
+  --text-secondary-color: #6a737d;
+
+  --overlay-background-color: rgba(0, 0, 0, 0.4);
+  --easing-ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --easing-ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  --easing-ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  
+  --button-height: 25px;
+  --button-text-color: #fff; 
+  --button-background: var(--main-color);
+  --button-hover-background: #6ad400;
+  
+  --secondary-button-text-color: #787c7f;
+  --secondary-button-background: #3a3c41;
+  --secondary-button-focus-shadow-color: rgba(225, 228, 232, 0.75);
+  --secondary-button-focus-border-color: #3a3c41;
+  --secondary-button-hover-background: #3a3c41;
+  --secondary-button-border: 1px solid var(--secondary-button-background);
+
+  --button-border-radius: 2px;
+  --text-field-height: 25px;
+  --text-field-focus-shadow-color: rgba(3, 102, 214, 0.25);
+  --title-bar-height: 28px;
+  --ui-view-margin: 20px 50px;
+  --header-line-spacing: 0.9em;
+
+  --footer-color: #787c7f;
+  --dialog-error-color: #d61010;
+  --shadow-color: rgba(71, 83, 95, 0.19);
+}

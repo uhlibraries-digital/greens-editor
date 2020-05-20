@@ -1,0 +1,96 @@
+{
+  "name": "greens-editor",
+  "productName": "Greens Editor",
+  "description": "Mints ARKs and Edits ARKs housed in the Greens ARK minter service",
+  "author": {
+    "name": "Sean Watkins",
+    "email": "slwatkins@uh.edu"
+  },
+  "homepage": "https://github.com/uhlibraries-digital/greens-editor",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
+    "pack": "yarn compile && electron-builder --dir"
+  },
+  "build": {
+    "productName": "Greens Editor",
+    "appId": "edu.uh.lib.greens-editor",
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ]
+    },
+    "directories": {
+      "buildResources": "resources",
+      "output": "release"
+    }
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-regular-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "classnames": "^2.2.6",
+    "electron-store": "^5.1.1",
+    "electron-updater": "^4.3.1",
+    "electron-window-state": "^5.0.3",
+    "event-kit": "^2.5.3",
+    "file-url": "^3.0.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-transition-group": "^1.2.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "source-map-support": "^0.5.16",
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/event-kit": "^2.4.0",
+    "@types/file-url": "^2.0.0",
+    "@types/node": "^10.12.18",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "@types/react-transition-group": "1.1.1",
+    "@types/request": "^2.48.5",
+    "@types/request-promise": "^4.1.46",
+    "@types/uuid": "^7.0.3",
+    "electron": "7.1.8",
+    "electron-builder": "^22.4.1",
+    "electron-webpack": "^2.8.2",
+    "electron-webpack-ts": "^3.1.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2",
+    "webpack": "~4.42.1"
+  },
+  "resolutions": {
+    "webpack-sources": "1.4.3"
+  }
+}

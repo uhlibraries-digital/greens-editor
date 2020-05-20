@@ -1,0 +1,91 @@
+.selection-header {
+  text-align: right;
+  font-size: 15px;
+  -webkit-app-region: drag;
+  flex: 0 0 auto;
+  height: var(--title-bar-height);
+  display: flex;
+  flex-direction: row;
+}
+
+.settings-button {
+    color: var(--text-color);
+    background-color: transparent;
+    border: none;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: 0 var(--spacing);
+}
+
+.window-controls {
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: var(--title-bar-height);
+
+  // Each button contains a single SVG element with a Windows 10-replica
+  // icon for the function it represents
+  button {
+    -webkit-app-region: no-drag;
+
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+    // Reset styles from global buttons
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+
+    color: #a0a0a0;
+    background-color: transparent;
+    transition: background-color 0.25s ease;
+
+    // Explicitly setting the line height to the height
+    // of the SVG illustrations helps with vertical alignment.
+    line-height: 10px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: #888;
+      color: #fff;
+
+      // Doing :hover:active as oposed to just :active is
+      // a conscious choice to match how the real Windows
+      // controls behave when someone hovers, clicks and then
+      // moves away from the hitbox.
+      &:active {
+        background-color: #666;
+
+        // Immediate feedback when clicking
+        transition: none;
+      }
+    }
+
+    // Close button is a special case, it needs to be red
+    // on hover and slightly lighter red on active.
+    &.close:hover {
+      background-color: #e81123;
+      color: #fff;
+
+      &:active {
+        background-color: #bf0f1d;
+
+        // Immediate feedback when clicking
+        transition: none;
+      }
+    }
+
+    /* https://css-tricks.com/cascading-svg-fill-color/ */
+    svg {
+      fill: currentColor;
+    }
+  }
+}

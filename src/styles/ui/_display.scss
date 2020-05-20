@@ -1,0 +1,32 @@
+.display {
+
+  .row-component {
+    justify-content: center;
+  }
+
+  .ark {
+    display: flex;
+    margin: var(--spacing) 0;
+
+    span {
+      font-size: 2em;
+      margin-right: var(--spacing);
+    }
+
+    button {
+      align-self: center;
+    }
+  }
+
+  .erc {
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+    .label {
+      text-align: right;
+      width: 40px;
+    }
+  }
+}
